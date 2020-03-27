@@ -1,5 +1,6 @@
 #include "redox.h"
 
+
 #ifdef SSD1306OLED
 void led_set_kb(uint8_t usb_led) {
     // put your keyboard LED indicator (ex: Caps Lock LED) toggling code here
@@ -8,6 +9,7 @@ void led_set_kb(uint8_t usb_led) {
 #endif
 
 void matrix_init_kb(void) {
+
     // // green led on
     // DDRD |= (1<<5);
     // PORTD &= ~(1<<5);
@@ -16,5 +18,5 @@ void matrix_init_kb(void) {
     // DDRB |= (1<<0);
     // PORTB &= ~(1<<0);
 
-    matrix_init_user();
+	matrix_init_user();
 };
