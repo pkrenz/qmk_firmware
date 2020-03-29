@@ -14,18 +14,18 @@ make rebow/rev1:default:avrdude
                               +-----+
                    +----------| USB |----------+
                    |          +-----+          |
-                   | [ ]D3      ___     RAW[ ] |
-                   | [ ]D2     / P \    GND[x] |  -> TRRS/LED
-                   | [ ]GND   /  R  \   RST[ ] |
-                   | [ ]GND   |  O  |   VCC[x] |  -> TRRS/LED
-           TRRS <- | [x]D1    |     |    F4[ ] |
-           TRRS <- | [x]D0    |  M  |    F5[x] |  -> COL0
+                   | [ ]D3      ___     RAW[ ] |					+-------+
+                   | [ ]D2     / P \    GND[x] |  -> TRRS/LED			GND -> 	| [x] T |
+           BTN  <- | [x]GND   /  R  \   RST[x] |  -> BTN			D0  ->  | [x] R |
+                   | [ ]GND   |  O  |   VCC[x] |  -> TRRS/LED			D1  ->  | [x] R |
+           TRRS <- | [x]D1    |     |    F4[ ] |                                VCC ->  | [x] S |
+           TRRS <- | [x]D0    |  M  |    F5[x] |  -> COL0                               +-------+
             LED <- | [x]D4    |  I  |    F6[x] |  -> COL1
            ROW0 <- | [x]C6    |  C  |    F7[x] |  -> COL2
            ROW1 <- | [x]D7    |  R  |    B1[x] |  -> COL3
            ROW2 <- | [x]E6    \  O  /    B3[x] |  -> COL4
-           ROW3 <- | [x]B4     \_ _/     B2[x] |  -> COL5
-           ROW4 <- | [x]B5       	 B6[x] |  -> COL6
+           ROW3 <- | [x]B4     \_ _/     B2[x] |  -> COL6
+           ROW4 <- | [x]B5       	 B6[x] |  -> COL5
                    |             	       |
                    | Pro Micro		       |
                    +---------------------------+
